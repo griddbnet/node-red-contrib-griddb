@@ -1,0 +1,10 @@
+{
+    "name" : "node-red-contrib-griddb",
+    "version" : "0.0.3",
+    "node-red" : {
+        "nodes": {
+            "griddb-put": "put.js", 
+            "griddb-query": "query.js"
+        }
+    }
+}

@@ -1,0 +1,45 @@
+<script type="text/javascript"> 
+    RED.nodes.registerType('griddb-put',{
+        category: 'function',
+        color: '#a6bbcf',
+        defaults: {
+            name: {value:""},
+            columnlist: {value:""},
+            ctype: {value:""},
+            rowkey: {value:"true"}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        label: function() {
+            return this.name||"griddb-put";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="griddb-put">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Container</label>
+        <input type="text" id="node-input-name" placeholder="Container ">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-columnlist"><i class="icon-tag"></i> Column List</label>
+        <input type="text" id="node-input-columnlist" placeholder="Column List">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-ctype"><i class="icon-tag"></i> Type</label>
+        <input type="text" id="node-input-ctype" placeholder="COLLECTION">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-rowkey"><i class="icon-tag"></i> Rowkey</label>
+        <input type="text" id="node-input-rowkey" placeholder="true">
+    </div>
+
+</script>
+
+<script type="text/html" data-help-name="griddb-put">
+    <p>Write Data to a GridDB Container</p>
+</script>
